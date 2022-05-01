@@ -1,0 +1,11 @@
+cd my-app
+cd src
+
+/*Si usas Mac ó Linux*/
+rm -f *
+
+/*Ó, si usas Windows:*/
+del *
+
+/*Luego, regresa a la carpeta del proyecto*/
+cd ..

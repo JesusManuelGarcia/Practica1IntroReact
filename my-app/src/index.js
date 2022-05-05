@@ -580,3 +580,14 @@ const moves = history.map((step, move) => {
     </li>
   );
 });
+class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null),
+      }],
+      stepNumber: 0,
+      xIsNext: true,
+    };
+  }

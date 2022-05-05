@@ -493,3 +493,41 @@ class Board extends React.Component {
               </div>
             );
           }
+          render() {
+            return (
+              <div>
+                <div className="board-row">
+                  {this.renderSquare(0)}
+                  {this.renderSquare(1)}
+                  {this.renderSquare(2)}
+                </div>
+                <div className="board-row">
+                  {this.renderSquare(3)}
+                  {this.renderSquare(4)}
+                  {this.renderSquare(5)}
+                </div>
+                <div className="board-row">
+                  {this.renderSquare(6)}
+                  {this.renderSquare(7)}
+                  {this.renderSquare(8)}
+                </div>
+              </div>
+            );
+          }
+          handleClick(i) {
+            const history = this.state.history;
+            const current = history[history.length - 1];
+            const squares = current.squares.slice();
+            if (calculateWinner(squares) || squares[i]) {
+              return;
+            }
+            squares[i] = this.state.xIsNext ? 'X' : 'O';
+            this.setState({
+              history: history.concat([{
+                squares: squares,
+              }]),
+              xIsNext: !this.state.xIsNext,
+            });
+          }
+          const numbers = [1, 2, 3];
+const doubled = numbers.map(x => x * 2); // [2, 4, 6]

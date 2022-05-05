@@ -150,3 +150,8 @@ class Board extends React.Component {
   renderSquare(i) {
     return <Square value={i} />;
   }
+  [
+    'O', null, 'X',
+    'X', 'X', 'O',
+    'O', null, null,
+  ]

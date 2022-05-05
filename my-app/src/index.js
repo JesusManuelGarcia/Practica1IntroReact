@@ -232,3 +232,10 @@ class Board extends React.Component {
   var player = {score: 1, name: 'Jeff'};
 player.score = 2;
 // Ahora `player` es {score: 2, name: 'Jeff'}
+var player = {score: 1, name: 'Jeff'};
+
+var newPlayer = Object.assign({}, player, {score: 2});
+// Ahora `player` no ha cambiado, pero `newPlayer` es {score: 2, name: 'Jeff'}
+
+// O si usas la sintaxis propuesta de propagación de objeto, puedes escribir:
+// var newPlayer = {...player, score: 2};

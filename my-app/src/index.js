@@ -362,3 +362,30 @@ class Board extends React.Component {
               xIsNext: !this.state.xIsNext,
             });
           }
+          history = [
+            // Antes del primer movimiento
+            {
+              squares: [
+                null, null, null,
+                null, null, null,
+                null, null, null,
+              ]
+            },
+            // Luego del primer movimiento
+            {
+              squares: [
+                null, null, null,
+                null, 'X', null,
+                null, null, null,
+              ]
+            },
+            // Luego del segundo movimiento
+            {
+              squares: [
+                null, null, null,
+                null, 'X', null,
+                null, null, 'O',
+              ]
+            },
+            // ...
+          ]

@@ -229,3 +229,6 @@ class Board extends React.Component {
       );
     }
   }
+  var player = {score: 1, name: 'Jeff'};
+player.score = 2;
+// Ahora `player` es {score: 2, name: 'Jeff'}

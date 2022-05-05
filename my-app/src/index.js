@@ -340,3 +340,25 @@ class Board extends React.Component {
         }
         return null;
       }
+      render() {
+        const winner = calculateWinner(this.state.squares);
+        let status;
+        if (winner) {
+          status = 'Winner: ' + winner;
+        } else {
+          status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        }
+    
+        return (
+          // el resto del código no ha cambiado
+          handleClick(i) {
+            const squares = this.state.squares.slice();
+            if (calculateWinner(squares) || squares[i]) {
+              return;
+            }
+            squares[i] = this.state.xIsNext ? 'X' : 'O';
+            this.setState({
+              squares: squares,
+              xIsNext: !this.state.xIsNext,
+            });
+          }

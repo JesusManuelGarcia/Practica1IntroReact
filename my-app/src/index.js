@@ -262,3 +262,8 @@ class Board extends React.Component {
       xIsNext: !this.state.xIsNext,
     });
   }
+  render() {
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+
+    return (
+      // el resto no ha cambiado

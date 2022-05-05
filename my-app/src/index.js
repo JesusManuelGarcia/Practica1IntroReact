@@ -155,3 +155,29 @@ class Board extends React.Component {
     'X', 'X', 'O',
     'O', null, null,
   ]
+  renderSquare(i) {
+    return <Square value={i} />;
+  }
+  renderSquare(i) {
+    return <Square value={this.state.squares[i]} />;
+  }
+  renderSquare(i) {
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
+  }
+  class Square extends React.Component {
+    render() {
+      return (
+        <button
+          className="square"
+          onClick={() => this.props.onClick()}
+        >
+          {this.props.value}
+        </button>
+      );
+    }
+  }

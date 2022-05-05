@@ -239,3 +239,10 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 // O si usas la sintaxis propuesta de propagación de objeto, puedes escribir:
 // var newPlayer = {...player, score: 2};
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
